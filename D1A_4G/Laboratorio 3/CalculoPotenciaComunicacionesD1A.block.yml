@@ -1,0 +1,37 @@
+id: CalculoPotenciaComunicacionesD1A
+label: QT GUI CalculoPotenciaComunicacionesD1A
+category: '[Modulos_D1A_4G_AD]'
+flags: need_qt_gui
+
+parameters:
+-   id: I_vect
+    label: Longitud FFT
+    dtype: int
+    default: '1024'
+    hide: none
+-   id: gui_hint
+    label: GUI Hint
+    dtype: gui_hint
+    hide: part
+
+inputs:
+-   label: in
+    dtype: float
+    vlen: 1
+
+outputs: []
+
+templates:
+    imports: 'from CalculoPotenciaComunicacionesD1A import CalculoPotenciaComunicacionesD1A  #
+        grc-generated hier_block'
+    make: "CalculoPotenciaComunicacionesD1A(\n    I_vect=${ I_vect },\n)\n<% win =\
+        \ 'self.%s'%id %>\n${ gui_hint() % win }"
+    callbacks:
+    - set_I_vect(${ I_vect })
+
+documentation: 'AndresGomezDanielCerro
+
+    /home/labcom/Documentos/D1A_4G/Laboratorio 3/CalculoPotenciaComunicacionesD1A.py'
+grc_source: /home/labcom/Documentos/D1A_4G/Laboratorio 3/Calculo de potencia.grc
+
+file_format: 1
