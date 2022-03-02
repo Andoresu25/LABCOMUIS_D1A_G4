@@ -1,6 +1,6 @@
 options:
   parameters:
-    author: ''
+    author: Daniel Cerro, Andrés Gómez
     category: '[GRC Hier Blocks]'
     cmake_opt: ''
     comment: ''
